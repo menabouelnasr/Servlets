@@ -67,7 +67,7 @@ public class Details extends HttpServlet {
              ResultSet rs = stmt.executeQuery("select * from Demo_Customers where customer_ID=" + custID);     
              System.out.println(rs);
            
-         output+="<table border=2 color=white bgcolor=lightgray>";
+         output+="<table border=2 color=white bgcolor=black>";
          output+="<tr><th>Address </th><th>City</th><th>State</th><th>Postal Code</th><th> Phone Number </th><th> Credit Limit</th></tr> ";
          
          boolean a=rs.next();

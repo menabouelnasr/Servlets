@@ -85,15 +85,14 @@ public class HelloWorldServlet extends HttpServlet {
 //         
 //         
            
-         output+="<table border=2 color=white bgcolor=lightgray>";
+         output+="<table border=2 color=white bgcolor=black>";
          output+="<tr><th>Customer ID </th><th>First Name</th><th>Last Name</th></tr>";
          while (rs.next()) {
         	 id= rs.getString("CUSTOMER_ID");
-        	
         	 First_Name = rs.getString("CUST_FIRST_NAME"); 
              Last_Name= rs.getString("CUST_LAST_NAME");
 
-             output+= "<tr><td><a href='Output.jsp'>" + id +"</a></td><td><a href='Details?customerID= "+ id+ "'>"+ First_Name + "</a></td><td>" + Last_Name + "</td></tr>"; 
+             output+= "<tr><td>"+id+"</td><td><a href= Details?customerID= "+ id + ">"+ First_Name + "</a></td><td>" + Last_Name + "</td></tr>"; 
          }
          
          
